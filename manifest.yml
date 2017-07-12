@@ -1,0 +1,10 @@
+---
+applications:
+- name: goingestion_errorlogs_restapi-thingmodeler-sap
+  buildpack: https://github.com/cloudfoundry/go-buildpack.git
+  command: errorlog-rest-dataingestion
+  instances: 1
+  memory: 256MB
+  services:
+   - cassandra-service
+   - thingconf-uaa
